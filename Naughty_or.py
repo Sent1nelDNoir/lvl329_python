@@ -1,11 +1,13 @@
-#https://www.codewars.com/kata/interactive-dictionary/train/python#   
+#https://www.codewars.com/kata/naughty-or-nice-2/train/python	
 
-class Dictionary(object):
-    def __init__(self):
-        self.my_dict = {}
+def whatListAmIOn(actions):
+    naughty = 0
+    nice = 0
 
-    def look(self, key):
-        return self.my_dict.get(key, "Can't find entry for {}".format(key))
+    for a in actions:
+        if a[0] in 'bfk':
+            naughty += 1
+        elif a[0] in 'gsn':
+            nice += 1
 
-    def newentry(self, key, value):
-        self.my_dict[key] = value 
+    return 'naughty' if naughty >= nice else 'nice'

@@ -8,7 +8,7 @@ def nth_fib(n):
     elif n == 2:
         return 1
     else:
-        while i < n:
+        for i < n:
             f1, f2 = f2, f1 + f2
             i += 1
         return f2

@@ -10,5 +10,5 @@ def nth_fib(n):
     else:
         for i < n:
             f1, f2 = f2, f1 + f2
-            i += 1
+            
         return f2
